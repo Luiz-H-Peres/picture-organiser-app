@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "dev": "concurrently --raw -n \"FRONTEND,BACKEND\" --kill-others-on-fail \"cd frontend && npm run dev\" \"cd backend && npm run dev\""
+    },
+    "private": true,
+    "workspaces": [
+        "backend",
+        "frontend"
+    ],
+    "devDependencies": {
+        "concurrently": "^9.1.2"
+    }
+}
