@@ -49,6 +49,12 @@ The frontend project uses [Vite](https://vitejs.dev/) as a build tool.
 
 The backend project uses Node.js and [Express](https://expressjs.com/) as a web framework.
 
+⚠️ Local Development Note
+Important: When running the application locally, please ensure that the backend API base URL in the frontend file frontend/src/api.js is updated with your current local IP address (e.g., http://192.168.X.X:3000).
+This is required because the app is not yet using environment variables or dynamic networking, and hardcoded URLs must match the machine's local IP to allow frontend-backend communication.
+
+📍 This step ensures full functionality when accessing the app from other devices on the same Wi-Fi network, such as testing from a mobile browser or Postman.
+
 For the database, I'm using [MongoDB](https://www.mongodb.com/) as a NoSQL database.
 
 This project it's structured as a monorepo using [NPM Workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces). 
